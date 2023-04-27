@@ -66,7 +66,8 @@ body {
     width: 400px;
 }
 
-.header button {
+.header button,
+.call-to-action button {
     font-weight: 600;
     border: none;
     font-size: 16px;
@@ -77,7 +78,8 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.header button:hover {
+.header button:hover,
+.call-to-action button:hover {
     transform: scale(1.1);
 }
 
@@ -111,6 +113,12 @@ blockquote,
     border: 3px solid #3882f6;
     padding: 4px;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.box img:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 
 .box p {
@@ -134,4 +142,31 @@ blockquote {
     font-weight: bold;
     margin: 0 auto;
     text-align: right;
+}
+
+.call-to-action {
+    display: flex;
+    background-color: #3882f6;
+    width: 900px;
+    margin: 50px auto;
+    padding: 45px 95px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.call-to-action,
+.call-to-action button {
+    font-size: 16px;
+    color: white;
+}
+
+.call-to-action button {
+    border: 2px solid white;
+}
+
+.footer {
+    font-size: 16px;
+    text-align: center;
+    padding: 35px;
 }
