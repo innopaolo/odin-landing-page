@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 10px 10px 60px;
     display: flex;
@@ -104,7 +104,7 @@ body {
 .boxes,
 blockquote,
 .quote p {
-    width: 700px;
+    max-width: 700px;
 }
 
 .box img {
@@ -124,6 +124,12 @@ blockquote,
 .box p {
     font-size: 16px;
     width: 150px;
+}
+
+.box img,
+.box p {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .quote {
@@ -147,7 +153,7 @@ blockquote {
 .call-to-action {
     display: flex;
     background-color: #3882f6;
-    width: 900px;
+    width: 80%;
     margin: 50px auto;
     padding: 45px 95px;
     justify-content: space-between;
@@ -169,4 +175,46 @@ blockquote {
     font-size: 16px;
     text-align: center;
     padding: 35px;
+}
+
+@media (max-width: 900px) {
+    .mobile {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mobile img {
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    .mobile p {
+        max-width: 500px;
+    }
+
+    .content,
+    .quote p {
+        text-align: center;
+    }
+
+    .boxes {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .box {
+        margin-bottom: 20px;
+    }
+
+    blockquote {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action {
+        flex-direction: column;
+        gap: 16px;
+        padding: 25px 45px;
+    }
 }
